@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+	<adminhtml_sales_order_index>
+		<reference name="head">
+			<action method="addItem" ifconfig="meanbee_barcodeannotator/general/active">
+				<type>skin_js</type>
+				<script>js/meanbee/barcodeannotator/popper.js</script>
+			</action>
+			<action method="addItem" ifconfig="meanbee_barcodeannotator/general/active">
+				<type>skin_js</type>
+				<script>js/meanbee/barcodeannotator/annotator.js</script>
+			</action>
+			<action method="addItem" ifconfig="meanbee_barcodeannotator/general/active">
+				<type>skin_css</type>
+				<stylesheet>css/meanbee/barcodeannotator.css</stylesheet>
+			</action>
+		</reference>
+	</adminhtml_sales_order_index>
+</layout>
