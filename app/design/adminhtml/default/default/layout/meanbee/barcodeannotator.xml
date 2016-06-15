@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
-	<adminhtml_sales_order_index>
+	<meanbee_barcodeannotator>
 		<reference name="head">
 			<action method="addItem" ifconfig="meanbee_barcodeannotator/general/active">
 				<type>skin_js</type>
@@ -15,5 +15,23 @@
 				<stylesheet>css/meanbee/barcodeannotator.css</stylesheet>
 			</action>
 		</reference>
+	</meanbee_barcodeannotator>
+	<adminhtml_sales_order_index>
+		<update handle="meanbee_barcodeannotator" />
 	</adminhtml_sales_order_index>
+	<adminhtml_sales_order_view>
+		<update handle="meanbee_barcodeannotator" />
+	</adminhtml_sales_order_view>
+	<adminhtml_sales_invoice_index>
+		<update handle="meanbee_barcodeannotator" />
+	</adminhtml_sales_invoice_index>
+	<adminhtml_sales_shipment_index>
+		<update handle="meanbee_barcodeannotator" />
+	</adminhtml_sales_shipment_index>
+	<adminhtml_sales_creditmemo_index>
+		<update handle="meanbee_barcodeannotator" />
+	</adminhtml_sales_creditmemo_index>
+	<adminhtml_catalog_product_index>
+		<update handle="meanbee_barcodeannotator" />
+	</adminhtml_catalog_product_index>
 </layout>
