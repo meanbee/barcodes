@@ -1,5 +1,5 @@
 <?php
-class Meanbee_Barcodes_Model_Config_Source_BarcodeSymbology
+class Meanbee_Barcodes_Model_Config_Source_AnnotatorBarcodeSymbology
 {
     public function toOptionArray() {
         $helper = Mage::helper('meanbee_barcodes');

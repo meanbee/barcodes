@@ -6,6 +6,7 @@ class Meanbee_Barcodes_Helper_Config extends Mage_Core_Helper_Abstract {
     const XML_SHIPMENT_NUMBER_BARCODE_SYMBOLOGY = 'meanbee_barcodes/annotator/shipment_number_barcode_symbology';
     const XML_CREDITMEMO_NUMBER_BARCODE_SYMBOLOGY = 'meanbee_barcodes/annotator/creditmemo_number_barcode_symbology';
     const XML_PRODUCT_SKU_BARCODE_SYMBOLOGY = 'meanbee_barcodes/annotator/product_sku_barcode_symbology';
+    const XML_READER_SYMBOLOGIES = 'meanbee_barcodes/reader/enabled_symbology';
 
     /**
      * @param null $store
@@ -59,5 +60,14 @@ class Meanbee_Barcodes_Helper_Config extends Mage_Core_Helper_Abstract {
      */
     public function getProductSkuBarcodeSymbology($store = null) {
         return Mage::getStoreConfig(self::XML_PRODUCT_SKU_BARCODE_SYMBOLOGY, $store);
+    }
+
+    /**
+     * @param null $store
+     *
+     * @return array
+     */
+    public function getReaderSymbologies($store = null) {
+        return explode(',', Mage::getStoreConfig(self::XML_READER_SYMBOLOGIES, $store));
     }
 }

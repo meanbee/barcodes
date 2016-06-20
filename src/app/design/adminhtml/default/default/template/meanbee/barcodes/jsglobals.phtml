@@ -1,0 +1,88 @@
+<script>
+    if (!('Meanbee' in window)) window.Meanbee = {};
+    if (!('Barcodes' in Meanbee)) Meanbee.Barcodes = {};
+    Meanbee.Barcodes.config = {}
+    Meanbee.Barcodes.config.readers = [];
+    <?php $symbologies = Mage::helper('meanbee_barcodes/config')->getReaderSymbologies(); ?>
+    <?php if (in_array('code128', $symbologies)): ?>
+        Meanbee.Barcodes.config.readers.push({ format: 'code_128_reader', config: {} });
+    <?php endif; ?>
+    <?php if (in_array('ean2', $symbologies) || in_array('ean5', $symbologies)): ?>
+        var supplements = [];
+        <?php if (in_array('ean5', $symbologies)): ?>
+            supplements.push('ean_5_reader');
+        <?php endif; ?>
+        <?php if (in_array('ean2', $symbologies)): ?>
+            supplements.push('ean_2_reader');
+        <?php endif; ?>
+        Meanbee.Barcodes.config.readers.push({ format: 'ean_reader', config: { supplements: supplements } });
+    <?php endif; ?>
+    <?php if (in_array('ean13', $symbologies)): ?>
+        Meanbee.Barcodes.config.readers.push({ format: 'ean_reader', config: {} });
+    <?php endif; ?>
+    <?php if (in_array('ean8', $symbologies)): ?>
+        Meanbee.Barcodes.config.readers.push({ format: 'ean_8_reader', config: {} });
+    <?php endif; ?>
+    <?php if (in_array('code39ext', $symbologies)): ?>
+        Meanbee.Barcodes.config.readers.push({ format: 'code_39_vin_reader', config: {} });
+    <?php endif; ?>
+    <?php if (in_array('code39', $symbologies)): ?>
+        Meanbee.Barcodes.config.readers.push({ format: 'code_39_reader', config: {} });
+    <?php endif; ?>
+    <?php if (in_array('rationalizedCodabar', $symbologies)): ?>
+        Meanbee.Barcodes.config.readers.push({ format: 'codabar_reader', config: {} });
+    <?php endif; ?>
+    <?php if (in_array('upce', $symbologies)): ?>
+        Meanbee.Barcodes.config.readers.push({ format: 'upc_e_reader', config: {} });
+    <?php endif; ?>
+    <?php if (in_array('upca', $symbologies)): ?>
+        Meanbee.Barcodes.config.readers.push({ format: 'upc_reader', config: {} });
+    <?php endif; ?>
+    <?php if (in_array('interleaved2of5', $symbologies)): ?>
+        Meanbee.Barcodes.config.readers.push({ format: 'i2of5_reader', config: {} });
+    <?php endif; ?>
+    Meanbee.Barcodes.config.readers = [
+        <?php if (in_array('code128', $symbologies)): ?>
+            { format: 'code_128_reader', config: {} }
+        <?php endif; ?>
+        <?php if (in_array('ean2', $symbologies) || in_array('ean5', $symbologies)): ?>
+            ,{
+                format: 'ean_reader',
+                config: {
+                    supplements: [
+                        <?php if (in_array('ean5', $symbologies)): ?>
+                            'ean_5_reader',
+                        <?php endif;?>
+                        <?php if (in_array('ean2', $symbologies)): ?>
+                            'ean_2_reader'
+                        <?php endif;?>
+                    ]
+                }
+            }
+        <?php endif; ?>
+        <?php if (in_array('ean13', $symbologies)): ?>
+            ,{ format: 'ean_reader', config: {} }
+        <?php endif; ?>
+        <?php if (in_array('ean8', $symbologies)): ?>
+            ,{ format: 'ean_8_reader', config: {} }
+        <?php endif; ?>
+        <?php if (in_array('code39ext', $symbologies)): ?>
+            ,{ format: 'code_39_vin_reader', config: {} }
+        <?php endif; ?>
+        <?php if (in_array('code39', $symbologies)): ?>
+            ,{ format: 'code_39_reader', config: {} }
+        <?php endif; ?>
+        <?php if (in_array('rationalizedCodabar', $symbologies)): ?>
+            ,{ format: 'codabar_reader', config: {} }
+        <?php endif; ?>
+        <?php if (in_array('upce', $symbologies)): ?>
+            ,{ format: 'upc_e_reader', config: {} }
+        <?php endif; ?>
+        <?php if (in_array('upca', $symbologies)): ?>
+            ,{ format: 'upc_reader', config: {} }
+        <?php endif; ?>
+        <?php if (in_array('interleaved2of5', $symbologies)): ?>
+            ,{ format: 'i2of5_reader', config: {} }
+        <?php endif; ?>
+    ];
+</script>

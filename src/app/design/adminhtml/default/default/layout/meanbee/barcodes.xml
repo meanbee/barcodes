@@ -17,28 +17,31 @@
 		</reference>
 	</meanbee_barcodeannotator>
 	<meanbee_barcodereader>
-        <reference name="head">
-            <action method="addItem" ifconfig="meanbee_barcodes/reader/active">
-                <type>skin_js</type>
-                <script>js/meanbee/barcodes/quagga.js</script>
-            </action>
-            <action method="addItem" ifconfig="meanbee_barcodes/reader/active">
-                <type>skin_js</type>
-                <script>js/meanbee/barcodes/vanillamodel.js</script>
-            </action>
-            <action method="addItem" ifconfig="meanbee_barcodes/reader/active">
-                <type>skin_js</type>
-                <script>js/meanbee/barcodes/reader.js</script>
-            </action>
-            <action method="addItem" ifconfig="meanbee_barcodes/reader/active">
-                <type>skin_css</type>
-                <script>css/meanbee/barcodes/reader.css</script>
-            </action>
-        </reference>
+		<reference name="head">
+			<action method="addItem" ifconfig="meanbee_barcodes/reader/active">
+				<type>skin_js</type>
+				<script>js/meanbee/barcodes/quagga.js</script>
+			</action>
+			<action method="addItem" ifconfig="meanbee_barcodes/reader/active">
+				<type>skin_js</type>
+				<script>js/meanbee/barcodes/vanillamodel.js</script>
+			</action>
+			<action method="addItem" ifconfig="meanbee_barcodes/reader/active">
+				<type>skin_js</type>
+				<script>js/meanbee/barcodes/reader.js</script>
+			</action>
+			<action method="addItem" ifconfig="meanbee_barcodes/reader/active">
+				<type>skin_css</type>
+				<script>css/meanbee/barcodes/reader.css</script>
+			</action>
+		</reference>
+		<reference name="content">
+			<block type="core/template" template="meanbee/barcodes/jsglobals.phtml"/>
+		</reference>
 	</meanbee_barcodereader>
-    <default>
+	<default>
 		<update handle="meanbee_barcodereader" />
-    </default>
+	</default>
 	<adminhtml_sales_order_index>
 		<update handle="meanbee_barcodeannotator" />
 	</adminhtml_sales_order_index>
