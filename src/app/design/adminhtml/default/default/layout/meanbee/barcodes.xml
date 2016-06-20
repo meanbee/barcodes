@@ -2,17 +2,17 @@
 <layout>
 	<meanbee_barcodeannotator>
 		<reference name="head">
-			<action method="addItem" ifconfig="meanbee_barcodeannotator/general/active">
+			<action method="addItem" ifconfig="meanbee_barcodes/annotator/active">
 				<type>skin_js</type>
-				<script>js/meanbee/barcodeannotator/popper.js</script>
+				<script>js/meanbee/barcodes/popper.js</script>
 			</action>
-			<action method="addItem" ifconfig="meanbee_barcodeannotator/general/active">
+			<action method="addItem" ifconfig="meanbee_barcodes/annotator/active">
 				<type>skin_js</type>
-				<script>js/meanbee/barcodeannotator/annotator.js</script>
+				<script>js/meanbee/barcodes/annotator.js</script>
 			</action>
-			<action method="addItem" ifconfig="meanbee_barcodeannotator/general/active">
+			<action method="addItem" ifconfig="meanbee_barcodes/annotator/active">
 				<type>skin_css</type>
-				<stylesheet>css/meanbee/barcodeannotator.css</stylesheet>
+				<stylesheet>css/meanbee/barcodes/annotator.css</stylesheet>
 			</action>
 		</reference>
 	</meanbee_barcodeannotator>

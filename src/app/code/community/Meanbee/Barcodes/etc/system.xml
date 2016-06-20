@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
     <sections>
-        <meanbee_barcodeannotator translate="label" module="meanbee_barcodeannotator">
-            <label>Meanbee: Barcode Annotator</label>
+        <meanbee_barcodes translate="label" module="meanbee_barcodes">
+            <label>Meanbee: Barcodes</label>
             <tab>sales</tab>
             <frontend_type>text</frontend_type>
             <sort_order>1200</sort_order>
@@ -10,8 +10,8 @@
             <show_in_website>1</show_in_website>
             <show_in_store>1</show_in_store>
             <groups>
-                <general translate="label" module="meanbee_barcodeannotator">
-                    <label>General</label>
+                <annotator translate="label" module="meanbee_barcodes">
+                    <label>Annotator</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>100</sort_order>
                     <show_in_default>1</show_in_default>
@@ -30,7 +30,7 @@
                         <order_number_barcode_symbology translate="label">
                             <label>Order Number Barcode Symbology</label>
                             <frontend_type>select</frontend_type>
-                            <source_model>meanbee_barcodeannotator/config_source_barcodeSymbology</source_model>
+                            <source_model>meanbee_barcodes/config_source_barcodeSymbology</source_model>
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -39,7 +39,7 @@
                         <invoice_number_barcode_symbology translate="label">
                             <label>Invoice Number Barcode Symbology</label>
                             <frontend_type>select</frontend_type>
-                            <source_model>meanbee_barcodeannotator/config_source_barcodeSymbology</source_model>
+                            <source_model>meanbee_barcodes/config_source_barcodeSymbology</source_model>
                             <sort_order>30</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -48,7 +48,7 @@
                         <shipment_number_barcode_symbology translate="label">
                             <label>Shipment Number Barcode Symbology</label>
                             <frontend_type>select</frontend_type>
-                            <source_model>meanbee_barcodeannotator/config_source_barcodeSymbology</source_model>
+                            <source_model>meanbee_barcodes/config_source_barcodeSymbology</source_model>
                             <sort_order>40</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -57,7 +57,7 @@
                         <creditmemo_number_barcode_symbology translate="label">
                             <label>Credit Memo Number Barcode Symbology</label>
                             <frontend_type>select</frontend_type>
-                            <source_model>meanbee_barcodeannotator/config_source_barcodeSymbology</source_model>
+                            <source_model>meanbee_barcodes/config_source_barcodeSymbology</source_model>
                             <sort_order>50</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -66,15 +66,15 @@
                         <product_sku_barcode_symbology translate="label">
                             <label>Product SKU Barcode Symbology</label>
                             <frontend_type>select</frontend_type>
-                            <source_model>meanbee_barcodeannotator/config_source_barcodeSymbology</source_model>
+                            <source_model>meanbee_barcodes/config_source_barcodeSymbology</source_model>
                             <sort_order>60</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </product_sku_barcode_symbology>
                     </fields>
-                </general>
+                </annotator>
             </groups>
-        </meanbee_barcodeannotator>
+        </meanbee_barcodes>
     </sections>
 </config>
