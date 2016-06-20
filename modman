@@ -1,0 +1,5 @@
+src/app/code/community/Meanbee/BarcodeAnnotator/*                            app/code/community/Meanbee/BarcodeAnnotator/
+src/app/design/adminhtml/default/default/layout/meanbee/barcodeannotator.xml app/design/adminhtml/default/default/layout/meanbee/barcodeannotator.xml
+src/app/etc/modules/Meanbee_BarcodeAnnotator.xml                             app/etc/modules/Meanee_BarcodeAnnotator.xml
+src/skin/adminhtml/base/default/css/meanbee/barcodeannotator.css             skin/adminhtml/base/default/css/meanbee/barcodeannotator.css
+src/skin/adminhtml/base/default/js/meanbee/barcodeannotator/*                skin/adminhtml/base/default/js/meanbee/barcodeannotator/
