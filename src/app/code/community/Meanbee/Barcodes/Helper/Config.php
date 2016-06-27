@@ -9,6 +9,13 @@ class Meanbee_Barcodes_Helper_Config extends Mage_Core_Helper_Abstract {
     const XML_READER_SYMBOLOGIES = 'meanbee_barcodes/reader/enabled_symbology';
 
     /**
+     * @return string
+     */
+    public function getVersion() {
+        return (string) Mage::getConfig()->getModuleConfig('Meanbee_Barcodes')->version;
+    }
+
+    /**
      * @param null $store
      *
      * @return bool
@@ -52,7 +59,7 @@ class Meanbee_Barcodes_Helper_Config extends Mage_Core_Helper_Abstract {
     public function getCreditMemoNumberBarcodeSymbology($store = null) {
         return Mage::getStoreConfig(self::XML_CREDITMEMO_NUMBER_BARCODE_SYMBOLOGY, $store);
     }
-    
+
     /**
      * @param null $store
      *
