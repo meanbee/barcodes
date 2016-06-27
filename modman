@@ -1,0 +1,6 @@
+src/app/code/community/Meanbee/Barcodes/*                            app/code/community/Meanbee/Barcodes/
+src/app/design/adminhtml/default/default/layout/meanbee/barcodes.xml app/design/adminhtml/default/default/layout/meanbee/barcodes.xml
+src/app/etc/modules/Meanbee_Barcodes.xml                             app/etc/modules/Meanee_Barcodes.xml
+src/skin/adminhtml/base/default/images/meanbee/barcodes/*            skin/adminhtml/base/default/images/meanbee/barcodes/
+src/skin/adminhtml/base/default/css/meanbee/barcodes/*               skin/adminhtml/base/default/css/meanbee/barcodes/
+src/skin/adminhtml/base/default/js/meanbee/barcodes/*                skin/adminhtml/base/default/js/meanbee/barcodes/
