@@ -6,6 +6,11 @@
         </Meanbee_Barcodes>
     </modules>
     <global>
+        <blocks>
+            <meanbee_barcodes>
+                <class>Meanbee_Barcodes_Block</class>
+            </meanbee_barcodes>
+        </blocks>
         <models>
             <meanbee_barcodes>
                 <class>Meanbee_Barcodes_Model</class>

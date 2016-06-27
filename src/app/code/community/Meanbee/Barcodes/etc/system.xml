@@ -10,6 +10,25 @@
             <show_in_website>1</show_in_website>
             <show_in_store>1</show_in_store>
             <groups>
+                <general translate="label" module="meanbee_barcodes">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <version translate="label">
+                            <label>Version</label>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>meanbee_barcodes/adminhtml_version</frontend_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </version>
+                    </fields>
+                </general>
                 <annotator translate="label" module="meanbee_barcodes">
                     <label>Annotator</label>
                     <frontend_type>text</frontend_type>
@@ -95,7 +114,7 @@
                             <label>Enabled Barcode Symbologies</label>
                             <frontend_type>multiselect</frontend_type>
                             <source_model>meanbee_barcodes/config_source_readerBarcodeSymbology</source_model>
-                            <comment>The greater number of enabled symbologies, the greater the change of false positive readings.</comment>
+                            <comment>The greater number of enabled symbologies, the greater the chance of false positive readings.</comment>
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
