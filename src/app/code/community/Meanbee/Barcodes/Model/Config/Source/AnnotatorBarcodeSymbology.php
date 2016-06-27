@@ -1,8 +1,8 @@
 <?php
-class Meanbee_BarcodeAnnotator_Model_Config_Source_BarcodeSymbology
+class Meanbee_Barcodes_Model_Config_Source_AnnotatorBarcodeSymbology
 {
     public function toOptionArray() {
-        $helper = Mage::helper('meanbee_barcodeannotator');
+        $helper = Mage::helper('meanbee_barcodes');
         return array(
             array('value' => null,                              'label' => $helper->__('None')),
             array('value' => 'auspost',                         'label' => $helper->__('AusPost 4 State Customer Code')),

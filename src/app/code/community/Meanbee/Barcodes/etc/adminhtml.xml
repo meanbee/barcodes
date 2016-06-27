@@ -11,9 +11,9 @@
                         <children>
                             <config>
                                 <children>
-                                    <meanbee_barcodeannotator translate="title" module="meanbee_barcodeannotator">
-                                        <title>Meanbee: Barcode Annotator</title>
-                                    </meanbee_barcodeannotator>
+                                    <meanbee_barcodes translate="title" module="meanbee_barcodes">
+                                        <title>Meanbee: Barcodes</title>
+                                    </meanbee_barcodes>
                                 </children>
                             </config>
                         </children>

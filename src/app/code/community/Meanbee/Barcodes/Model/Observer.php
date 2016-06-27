@@ -1,6 +1,6 @@
 <?php
 
-class Meanbee_BarcodeAnnotator_Model_Observer
+class Meanbee_Barcodes_Model_Observer
 {
     /**
      * Update the columns in the Sales Order grid.
@@ -10,8 +10,8 @@ class Meanbee_BarcodeAnnotator_Model_Observer
      */
     public function updateSalesGridColumns(Varien_Event_Observer $observer)
     {
-        $config = Mage::helper('meanbee_barcodeannotator/config');
-        if (!$config->getEnabled()) {
+        $config = Mage::helper('meanbee_barcodes/config');
+        if (!$config->getAnnotatorEnabled()) {
             return;
         }
 
@@ -90,22 +90,22 @@ class Meanbee_BarcodeAnnotator_Model_Observer
     }
     
     public function decorateOrderNumber($value, $row, $column, $isExport) {
-        return sprintf('<div title class="barcode" data-barcode-symbology="%s">%s</div>', Mage::helper('meanbee_barcodeannotator/config')->getOrderNumberBarcodeSymbology(), $value);
+        return sprintf('<div title class="barcode" data-barcode-symbology="%s">%s</div>', Mage::helper('meanbee_barcodes/config')->getOrderNumberBarcodeSymbology(), $value);
     }
 
     public function decorateInvoiceNumber($value, $row, $column, $isExport) {
-        return sprintf('<div title class="barcode" data-barcode-symbology="%s">%s</div>', Mage::helper('meanbee_barcodeannotator/config')->getInvoiceNumberBarcodeSymbology(), $value);
+        return sprintf('<div title class="barcode" data-barcode-symbology="%s">%s</div>', Mage::helper('meanbee_barcodes/config')->getInvoiceNumberBarcodeSymbology(), $value);
     }
 
     public function decorateShipmentNumber($value, $row, $column, $isExport) {
-        return sprintf('<div title class="barcode" data-barcode-symbology="%s">%s</div>', Mage::helper('meanbee_barcodeannotator/config')->getShipmentNumberBarcodeSymbology(), $value);
+        return sprintf('<div title class="barcode" data-barcode-symbology="%s">%s</div>', Mage::helper('meanbee_barcodes/config')->getShipmentNumberBarcodeSymbology(), $value);
     }
 
     public function decorateCreditMemoNumber($value, $row, $column, $isExport) {
-        return sprintf('<div title class="barcode" data-barcode-symbology="%s">%s</div>', Mage::helper('meanbee_barcodeannotator/config')->getCreditMemoNumberBarcodeSymbology(), $value);
+        return sprintf('<div title class="barcode" data-barcode-symbology="%s">%s</div>', Mage::helper('meanbee_barcodes/config')->getCreditMemoNumberBarcodeSymbology(), $value);
     }
 
     public function decorateProductSku($value, $row, $column, $isExport) {
-        return sprintf('<div title class="barcode" data-barcode-symbology="%s">%s</div>', Mage::helper('meanbee_barcodeannotator/config')->getProductSkuBarcodeSymbology(), $value);
+        return sprintf('<div title class="barcode" data-barcode-symbology="%s">%s</div>', Mage::helper('meanbee_barcodes/config')->getProductSkuBarcodeSymbology(), $value);
     }
 }

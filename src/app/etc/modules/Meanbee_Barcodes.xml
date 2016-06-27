@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Meanbee_BarcodeAnnotator>
+        <Meanbee_Barcodes>
             <active>true</active>
             <codePool>community</codePool>
-        </Meanbee_BarcodeAnnotator>
+        </Meanbee_Barcodes>
     </modules>
 </config>
